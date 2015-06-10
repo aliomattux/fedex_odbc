@@ -1,0 +1,31 @@
+<openerp>
+    <data>
+
+
+        <!-- Delivery Views -->
+        <record id="view_delivery_carrier_fedex_code_tree" model="ir.ui.view">
+            <field name="name">Delivery Carrier fedex Tree</field>
+            <field name="model">delivery.carrier</field>
+	    <field name="inherit_id" ref="delivery.view_delivery_carrier_tree" />
+            <field name="arch" type="xml">
+                    <field name="name" position="after">
+			<field name="fedex_code" />
+		    </field>
+            </field>
+        </record>
+
+        <record id="view_delivery_carrier_fedex_code_form" model="ir.ui.view">
+            <field name="name">Delivery Carrier Form</field>
+            <field name="model">delivery.carrier</field>
+	    <field name="inherit_id" ref="delivery.view_delivery_carrier_form" />
+            <field name="arch" type="xml">
+                <group name="basic" position="after">
+		    <group name="fedex_config" >
+			<field name="fedex_code" />
+		    </group>
+                </group>
+            </field>
+        </record>
+
+    </data>
+</openerp>
