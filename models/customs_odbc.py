@@ -21,7 +21,7 @@ class FedExCustomsOdbc(osv.osv):
                 SELECT picking.id, CAST('Goods' AS CHAR(16)) AS description_of_good,
                 CAST('9.99' AS FLOAT) AS unit_price, CAST (1 AS INT) AS units, CAST('EA' AS CHAR(5)) AS unit_of_measure,
 		CAST('US' AS CHAR(5)) AS country_of_origin
-                FROM stock_picking
+                FROM stock_picking picking
          )""")
 
     def unlink(self, cr, uid, ids, context=None):
