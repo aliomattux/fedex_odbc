@@ -8,7 +8,7 @@
     """,
     'website': 'http://www.gcotech.com',
     'images': [],
-    'depends' : [],
+    'depends' : ['delivery'],
     'data': [],
     'demo': [],
     'test': [],
